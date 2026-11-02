@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>演示1：fetch 发送 GET 请求</title>
+  <style>
+    body { font-family: "Microsoft YaHei", sans-serif; padding: 30px; background: #F8FAFC; color: #0F172A; }
+    h3 { color: #2563EB; }
+    button { padding: 8px 18px; font-size: 15px; cursor: pointer; background: #2563EB; color: #fff; border: none; border-radius: 6px; }
+    table { border-collapse: collapse; width: 700px; margin-top: 16px; background: #fff; }
+    td, th { border: 1px solid #CBD5E1; padding: 6px 12px; text-align: left; }
+    th { background: #F1F5F9; }
+    .tip { color: #64748B; font-size: 14px; margin-top: 10px; }
+    #status { font-family: Consolas, monospace; font-weight: bold; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h3>演示1：用 fetch 拿商品列表（GET）</h3>
+
+  <button id="loadBtn">点击加载商品数据</button>
+  <div id="status"></div>
+
+  <table>
+    <thead>
+      <tr><th>id</th><th>商品名</th><th>价格</th><th>库存</th></tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <p class="tip">打开 F12 → Network 面板，点击按钮，观察新增的请求：Method = GET，Status = 200。</p>
+
+  <script>
+    // 后端接口地址（json-server 提供）
+    const url = 'http://localhost:3000/goods'
+
+    const tableBody = document.querySelector('#table-body')
+    const statusDiv = document.querySelector('#status')
+
+    // 写法一：Promise 链式调用（课本标准写法）
+    function loadWithThen() {
+      fetch(url)
+        .then(res => {
+          // res 是"响应对象"，不是数据本身，要调用 res.json() 才能拿到数据
+          console.log('响应状态码：', res.status)
+          statusDiv.textContent = '状态码：' + res.status
+          return res.json()
+        })
+        .then(data => {
+          console.log('拿到商品数据：', data)
+          render(data)
+        })
+        .catch(err => {
+          console.error('请求失败：', err)
+          statusDiv.textContent = '请求失败，看控制台'
+        })
+    }
+
+    // 写法二：async / await（更好读，后面常用）
+    async function loadWithAwait() {
+      const res = await fetch(url)
+      const data = await res.json()
+      console.log('拿到商品数据：', data)
+      statusDiv.textContent = '状态码：' + res.status
+      render(data)
+    }
+
+    // 把数据渲染成表格
+    function render(list) {
+      tableBody.innerHTML = ''
+      list.forEach(item => {
+        const tr = document.createElement('tr')
+        tr.innerHTML = `
+          <td>${item.id}</td>
+          <td>${item.title}</td>
+          <td>${item.price}</td>
+          <td>${item.stock}</td>
+        `
+        tableBody.appendChild(tr)
+      })
+    }
+
+    document.querySelector('#loadBtn').onclick = loadWithAwait
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#F59E0B' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>三 步 搭 建</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>17 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    不写一行后端代码，也能有接口
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 24 }}>
+                <Box style={{ width: 400, flexDirection: 'column', gap: 14 }}>
+                    <Box
+                        style={{
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                            <Box style={{ width: 30, height: 30, borderRadius: 15, background: '#2563EB', justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                            </Box>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>建一个 db.json</Text>
+                        </Box>
+                        <Text style={{ fontSize: 15, color: '#64748B', marginTop: 12, lineHeight: 1.6 }}>
+                            顶层 key 叫什么，接口就叫什么
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                            <Box style={{ width: 30, height: 30, borderRadius: 15, background: '#06B6D4', justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                            </Box>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>敲一行命令</Text>
+                        </Box>
+                        <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4, lineHeight: 1.6 }}>
+                                服务跑在 3000 端口
+                            </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            background: 'rgba(245,158,11,0.14)',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                            <Box style={{ width: 30, height: 30, borderRadius: 15, background: '#F59E0B', justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                            </Box>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>浏览器访问验证</Text>
+                        </Box>
+                        <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4, lineHeight: 1.6 }}>
+                                看到 JSON 就成了
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+                    <CodeBlock language='json' theme='github-light' macHeader={false}>
+                        {`// db.json
+{
+  "goods": [
+    { "id": 1, "title": "无线鼠标",
+      "price": 79, "stock": 100 },
+    { "id": 2, "title": "机械键盘",
+      "price": 199, "stock": 56 }
+  ]
+}`}
+                    </CodeBlock>
+
+                    <CodeBlock language='bash' theme='github-light' macHeader={false}>
+                        {`# 在 db.json 所在文件夹里执行
+npx json-server --watch db.json --port 3000
+
+# 第一次执行会问是否安装，输入 y 回车`}
+                    </CodeBlock>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'rgba(245,158,11,0.12)',
+                    borderRadius: 12,
+                    paddingTop: 18,
+                    paddingBottom: 18,
+                    paddingLeft: 28,
+                    paddingRight: 28,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 16,
+                }}
+            >
+                <FAIcon name='exclamation-circle' style={{ fill: '#B45309', width: 24, height: 24 }} />
+                <Text style={{ fontSize: 18, color: '#0F172A', lineHeight: 1.6 }}>
+                    这个黑窗口全程不能关。关掉 = 后端停机 = 所有请求失败
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>17 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

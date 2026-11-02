@@ -1,0 +1,134 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#06B6D4' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>A X I O S</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>14 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    Fetch 和 Axios，差在哪
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 22 }}>
+                <Box style={{ width: 560, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB', marginBottom: 12 }}>
+                        fetch（浏览器原生）
+                    </Text>
+                    <CodeBlock language='javascript' theme='github-light' macHeader={false}>
+                        {`fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+})
+  .then(res => res.json())
+  .then(data => console.log(data))`}
+                    </CodeBlock>
+
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#0891B2', marginTop: 20, marginBottom: 12 }}>
+                        axios（第三方库）
+                    </Text>
+                    <CodeBlock language='javascript' theme='github-light' macHeader={false}>
+                        {`axios.post(url, data)
+  .then(res => {
+    // 已经自动转成对象了
+    console.log(res.data)
+  })`}
+                    </CodeBlock>
+                </Box>
+
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Box
+                        style={{
+                            flexDirection: 'row',
+                            background: '#2563EB',
+                            borderTopLeftRadius: 10,
+                            borderTopRightRadius: 10,
+                            paddingTop: 13,
+                            paddingBottom: 13,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                        }}
+                    >
+                        <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>对比项</Text>
+                        <Text style={{ width: 150, fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>fetch</Text>
+                        <Text style={{ width: 150, fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>axios</Text>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', background: '#F1F5F9', paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 20 }}>
+                        <Text style={{ flex: 1, fontSize: 16, color: '#0F172A' }}>从哪来</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#64748B' }}>浏览器自带</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#0F172A' }}>要装包 / 引 CDN</Text>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', background: '#FFFFFF', paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 20 }}>
+                        <Text style={{ flex: 1, fontSize: 16, color: '#0F172A' }}>JSON 转换</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#64748B' }}>手动 res.json()</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#0F172A' }}>自动，用 res.data</Text>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', background: '#F1F5F9', paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 20 }}>
+                        <Text style={{ flex: 1, fontSize: 16, color: '#0F172A' }}>POST 请求体</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#64748B' }}>手动 stringify</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#0F172A' }}>直接传对象</Text>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', background: '#FFFFFF', paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 20 }}>
+                        <Text style={{ flex: 1, fontSize: 16, color: '#0F172A' }}>404 / 500</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#64748B' }}>不算失败，要 res.ok</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#0F172A' }}>自动进 catch</Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flexDirection: 'row',
+                            background: '#F1F5F9',
+                            borderBottomLeftRadius: 10,
+                            borderBottomRightRadius: 10,
+                            paddingTop: 13,
+                            paddingBottom: 13,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                        }}
+                    >
+                        <Text style={{ flex: 1, fontSize: 16, color: '#0F172A' }}>企业里</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#64748B' }}>较少直接用</Text>
+                        <Text style={{ width: 150, fontSize: 16, color: '#0F172A' }}>非常常见</Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>14 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

@@ -1,0 +1,166 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>痛 点 导 入</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>04 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    数据写死在代码里，会怎样？
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 26 }}>
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderTopWidth: 5,
+                        borderTopColor: '#94A3B8',
+                        borderRadius: 12,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 26,
+                        paddingRight: 26,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='times-circle' style={{ fill: '#94A3B8', width: 26, height: 26 }} />
+                        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#0F172A' }}>硬编码</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, color: '#64748B', marginTop: 18, lineHeight: 1.8 }}>
+                        商品数据直接写在 JS 数组里。
+                        <br />
+                        改一个价格，要改代码、重新打包、重新发布。
+                        <br />
+                        换个商品，前端工程师得亲自上。
+                        <br />
+                        运营想在后台改数据？做不到。
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            background: '#FFFFFF',
+                            borderRadius: 6,
+                            paddingTop: 8,
+                            paddingBottom: 8,
+                            paddingLeft: 14,
+                            paddingRight: 14,
+                            alignSelf: 'flex-start',
+                        }}
+                    >
+                        <Text style={{ fontSize: 14, fontFamily: 'Consolas', color: '#94A3B8' }}>
+                            const goods = [ ... ]
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        width: 60,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <FAIcon name='arrow-right' style={{ fill: '#2563EB', width: 34, height: 34 }} />
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: 'rgba(37,99,235,0.06)',
+                        borderTopWidth: 5,
+                        borderTopColor: '#2563EB',
+                        borderRadius: 12,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 26,
+                        paddingRight: 26,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='check-circle' style={{ fill: '#2563EB', width: 26, height: 26 }} />
+                        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#0F172A' }}>走接口</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, color: '#64748B', marginTop: 18, lineHeight: 1.8 }}>
+                        数据存在服务器的数据库里。
+                        <br />
+                        前端发一个请求，后端把数据给回来。
+                        <br />
+                        运营在后台改数据，前端页面自动跟着变。
+                        <br />
+                        前端只管"要"和"显示"。
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            background: '#FFFFFF',
+                            borderRadius: 6,
+                            paddingTop: 8,
+                            paddingBottom: 8,
+                            paddingLeft: 14,
+                        paddingRight: 14,
+                            alignSelf: 'flex-start',
+                        }}
+                    >
+                        <Text style={{ fontSize: 14, fontFamily: 'Consolas', color: '#2563EB' }}>
+                            fetch('/goods')
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'linear-gradient(120deg, #2563EB 0%, #06B6D4 100%)',
+                    borderRadius: 14,
+                    paddingTop: 26,
+                    paddingBottom: 26,
+                    paddingLeft: 34,
+                    paddingRight: 34,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 18,
+                }}
+            >
+                <FAIcon name='store' style={{ fill: '#FFFFFF', width: 30, height: 30 }} />
+                <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>
+                    前端是顾客，后端是奶茶店柜台，接口就是那个点单窗口
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>04 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

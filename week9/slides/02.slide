@@ -1,0 +1,251 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'absolute',
+                bottom: -180,
+                right: -120,
+                width: 460,
+                height: 460,
+                borderRadius: 230,
+                background: 'rgba(37,99,235,0.05)',
+            }}
+        />
+
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>课 程 导 览</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>02 / 26</Text>
+                </Box>
+
+                <Text
+                    style={{
+                        fontSize: 34,
+                        fontWeight: 'bold',
+                        color: '#0F172A',
+                        lineHeight: 1.3,
+                        marginTop: 16,
+                    }}
+                >
+                    今天走完这四步
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 20 }}>
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 24,
+                        paddingBottom: 22,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Text style={{ fontSize: 40, fontFamily: 'Consolas', fontWeight: 'bold', color: '#2563EB', lineHeight: 1 }}>01</Text>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0F172A', marginTop: 12, lineHeight: 1.4 }}>
+                        HTTP 基础
+                    </Text>
+                    <Text style={{ fontSize: 15, color: '#64748B', marginTop: 10, lineHeight: 1.7 }}>
+                        请求与响应
+                        <br />
+                        GET / POST
+                        <br />
+                        状态码 · JSON
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            background: 'rgba(37,99,235,0.10)',
+                            borderRadius: 6,
+                            paddingTop: 7,
+                            paddingBottom: 7,
+                            alignSelf: 'flex-start',
+                            paddingLeft: 12,
+                            paddingRight: 12,
+                        }}
+                    >
+                        <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#2563EB', fontWeight: 'bold' }}>
+                            概念为主
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 24,
+                        paddingBottom: 22,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Text style={{ fontSize: 40, fontFamily: 'Consolas', fontWeight: 'bold', color: '#06B6D4', lineHeight: 1 }}>02</Text>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0F172A', marginTop: 12, lineHeight: 1.4 }}>
+                        Fetch 与跨域
+                    </Text>
+                    <Text style={{ fontSize: 15, color: '#64748B', marginTop: 10, lineHeight: 1.7 }}>
+                        Promise 回顾
+                        <br />
+                        fetch 发请求
+                        <br />
+                        跨域是怎么来的
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            background: 'rgba(6,182,212,0.14)',
+                        borderRadius: 6,
+                            paddingTop: 7,
+                            paddingBottom: 7,
+                            alignSelf: 'flex-start',
+                            paddingLeft: 12,
+                            paddingRight: 12,
+                        }}
+                    >
+                        <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#0891B2', fontWeight: 'bold' }}>
+                            动手为主
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 24,
+                        paddingBottom: 22,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Text style={{ fontSize: 40, fontFamily: 'Consolas', fontWeight: 'bold', color: '#F59E0B', lineHeight: 1 }}>03</Text>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0F172A', marginTop: 12, lineHeight: 1.4 }}>
+                        json-server
+                    </Text>
+                    <Text style={{ fontSize: 15, color: '#64748B', marginTop: 10, lineHeight: 1.7 }}>
+                            一键起后端
+                        <br />
+                            写 db.json
+                        <br />
+                            AI 造数据
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            background: 'rgba(245,158,11,0.16)',
+                            borderRadius: 6,
+                            paddingTop: 7,
+                            paddingBottom: 7,
+                            alignSelf: 'flex-start',
+                            paddingLeft: 12,
+                            paddingRight: 12,
+                        }}
+                    >
+                        <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#B45309', fontWeight: 'bold' }}>
+                            Mock 后端
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+                        borderRadius: 14,
+                        paddingTop: 24,
+                        paddingBottom: 22,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                        flexDirection: 'column',
+                        boxShadow: '0 4px 20px rgba(37,99,235,0.20)',
+                    }}
+                >
+                    <Text style={{ fontSize: 40, fontFamily: 'Consolas', fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>04</Text>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#FFFFFF', marginTop: 12, lineHeight: 1.4 }}>
+                        前端联调实战
+                    </Text>
+                    <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.88)', marginTop: 10, lineHeight: 1.7 }}>
+                        列表 · 搜索
+                        <br />
+                        新增 · 刷新
+                        <br />
+                        CRUD 雏形
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            background: 'rgba(255,255,255,0.22)',
+                            borderRadius: 6,
+                            paddingTop: 7,
+                            paddingBottom: 7,
+                            alignSelf: 'flex-start',
+                            paddingLeft: 12,
+                            paddingRight: 12,
+                        }}
+                    >
+                        <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#FFFFFF', fontWeight: 'bold' }}>
+                            出成果
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: '#F1F5F9',
+                    borderRadius: 12,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    paddingLeft: 28,
+                    paddingRight: 28,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 16,
+                }}
+            >
+                <FAIcon name='flag-checkered' style={{ fill: '#F59E0B', width: 26, height: 26 }} />
+                <Text style={{ fontSize: 19, color: '#0F172A' }}>
+                    下课时的交付物：一个能从"后端"加载数据、搜索过滤、提交新增的商品管理页面
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>02 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

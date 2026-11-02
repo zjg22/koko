@@ -1,0 +1,166 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>J S O N</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>07 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    JSON：前后端之间的普通话
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 28 }}>
+                <Box style={{ width: 520, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.7, marginBottom: 14 }}>
+                        后端不管用什么语言写，吐出来的都是这一串文本；
+                        前端拿到后再翻译成自己认识的对象。
+                    </Text>
+                    <CodeBlock language='json' theme='github-light' macHeader={false}>
+                        {`[
+  {
+    "id": 1,
+    "title": "无线鼠标",
+    "price": 79,
+    "stock": 100
+  },
+  {
+    "id": 2,
+    "title": "机械键盘",
+    "price": 199,
+    "stock": 56
+  }
+]`}
+                    </CodeBlock>
+                </Box>
+
+                <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+                    <Box
+                        style={{
+                            background: '#F1F5F9',
+                            borderRadius: 10,
+                            paddingTop: 16,
+                            paddingBottom: 16,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 14,
+                        }}
+                    >
+                        <FAIcon name='check-circle' style={{ fill: '#2563EB', width: 22, height: 22 }} />
+                        <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                            键名必须<Text style={{ fontWeight: 'bold' }}>双引号</Text>
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            background: '#F1F5F9',
+                            borderRadius: 10,
+                            paddingTop: 16,
+                            paddingBottom: 16,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 14,
+                        }}
+                    >
+                        <FAIcon name='check-circle' style={{ fill: '#2563EB', width: 22, height: 22 }} />
+                        <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                            不能有<Text style={{ fontWeight: 'bold' }}>单引号、注释</Text>
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            background: '#F1F5F9',
+                            borderRadius: 10,
+                            paddingTop: 16,
+                            paddingBottom: 16,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 14,
+                        }}
+                    >
+                        <FAIcon name='check-circle' style={{ fill: '#2563EB', width: 22, height: 22 }} />
+                        <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                            支持：对象 · 数组 · 字符串 · 数字 · 布尔 · null
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            background: 'rgba(245,158,11,0.12)',
+                        borderRadius: 10,
+                            paddingTop: 16,
+                            paddingBottom: 16,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 14,
+                        }}
+                    >
+                        <FAIcon name='exclamation-triangle' style={{ fill: '#B45309', width: 22, height: 22 }} />
+                        <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                            不支持：函数 · undefined · 日期对象
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+                            borderRadius: 10,
+                            paddingTop: 16,
+                            paddingBottom: 16,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 14,
+                        }}
+                    >
+                        <FAIcon name='quote-left' style={{ fill: '#FFFFFF', width: 20, height: 20 }} />
+                        <Text style={{ fontSize: 17, color: '#FFFFFF', fontWeight: 'bold' }}>
+                            像 JS 对象，但不是 JS 对象
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>07 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

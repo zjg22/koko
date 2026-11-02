@@ -1,0 +1,181 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>H T T P</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>05 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    一个请求，由三部分组成
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'column', width: '100%', gap: 12 }}>
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'stretch',
+                        background: '#F1F5F9',
+                        borderRadius: 10,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        gap: 20,
+                    }}
+                >
+                    <Box
+                        style={{
+                            width: 130,
+                            background: '#2563EB',
+                            borderRadius: 8,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>请求行</Text>
+                    </Box>
+                    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 16, fontFamily: 'Consolas', color: '#0F172A' }}>
+                            POST /goods HTTP/1.1
+                        </Text>
+                        <Text style={{ fontSize: 14, color: '#64748B', marginTop: 5 }}>
+                            请求方法 + 接口地址 + 协议版本
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'stretch',
+                        background: '#F1F5F9',
+                        borderRadius: 10,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        gap: 20,
+                    }}
+                >
+                    <Box
+                        style={{
+                            width: 130,
+                            background: '#06B6D4',
+                            borderRadius: 8,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>请求头</Text>
+                    </Box>
+                    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 16, fontFamily: 'Consolas', color: '#0F172A' }}>
+                            Content-Type: application/json
+                        </Text>
+                        <Text style={{ fontSize: 14, color: '#64748B', marginTop: 5 }}>
+                            附加信息：数据格式、身份凭证
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'stretch',
+                        background: '#F1F5F9',
+                        borderRadius: 10,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        gap: 20,
+                    }}
+                >
+                    <Box
+                        style={{
+                            width: 130,
+                            background: '#F59E0B',
+                            borderRadius: 8,
+                            justifyContent: 'center',
+                        alignItems: 'center',
+                        }}
+                    >
+                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>请求体</Text>
+                    </Box>
+                    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 16, fontFamily: 'Consolas', color: '#0F172A' }}>
+                            {"{"} "title": "蓝牙耳机", "price": 129 {"}"}
+                        </Text>
+                        <Text style={{ fontSize: 14, color: '#64748B', marginTop: 5 }}>
+                            要交给后端的数据（GET 一般为空）
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: '#FFFFFF',
+                    borderWidth: 1,
+                    borderColor: '#E2E8F0',
+                    borderRadius: 12,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    paddingLeft: 26,
+                    paddingRight: 26,
+                    flexDirection: 'column',
+                    gap: 12,
+                }}
+            >
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                    <Box style={{ background: '#2563EB', borderRadius: 5, paddingTop: 4, paddingBottom: 4, paddingLeft: 12, paddingRight: 12 }}>
+                        <Text style={{ fontSize: 15, fontFamily: 'Consolas', color: '#FFFFFF', fontWeight: 'bold' }}>GET</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                        <Text style={{ fontWeight: 'bold' }}>查</Text> — 数据放在 URL 上 ?id=1&name=apple，不改服务器数据
+                    </Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                    <Box style={{ background: '#F59E0B', borderRadius: 5, paddingTop: 4, paddingBottom: 4, paddingLeft: 12, paddingRight: 12 }}>
+                        <Text style={{ fontSize: 15, fontFamily: 'Consolas', color: '#FFFFFF', fontWeight: 'bold' }}>POST</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                        <Text style={{ fontWeight: 'bold' }}>增</Text> — 数据放在请求体 body，会改服务器数据
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>05 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

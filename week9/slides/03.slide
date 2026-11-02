@@ -1,0 +1,136 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'absolute',
+                top: -100,
+                right: -60,
+                width: 520,
+                height: 520,
+                borderRadius: 260,
+                background:
+                    'linear-gradient(135deg, rgba(37,99,235,0.10) 0%, rgba(6,182,212,0.04) 100%)',
+            }}
+        />
+        <Box
+            style={{
+                position: 'absolute',
+                bottom: 60,
+                right: 360,
+                width: 220,
+                height: 220,
+                borderRadius: 110,
+                background: 'rgba(245,158,11,0.07)',
+            }}
+        />
+
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                gap: 10,
+            }}
+        >
+            <Text
+                style={{
+                    fontSize: 21,
+                    color: '#64748B',
+                    letterSpacing: 6,
+                }}
+            >
+                课 时 01
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 130,
+                    fontFamily: 'Consolas',
+                    fontWeight: 'bold',
+                    color: '#2563EB',
+                    lineHeight: 1,
+                    letterSpacing: -4,
+                    marginTop: 6,
+                }}
+            >
+                01
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 52,
+                    fontWeight: 'bold',
+                    color: '#0F172A',
+                    lineHeight: 1.25,
+                    marginTop: 10,
+                }}
+            >
+                HTTP 基础
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 25,
+                    color: '#64748B',
+                    lineHeight: 1.6,
+                    marginTop: 12,
+                }}
+            >
+                GET / POST · 状态码 · JSON 格式 · 接口规范
+            </Text>
+
+            <Box style={{ flexDirection: 'row', gap: 14, marginTop: 34 }}>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>请求怎么组成的</Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>数据在路上长什么样</Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>接口地址怎么起</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Slide>
+);

@@ -1,0 +1,123 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'absolute',
+                top: -120,
+                right: -80,
+                width: 560,
+                height: 560,
+                borderRadius: 280,
+                background:
+                    'linear-gradient(135deg, rgba(6,182,212,0.12) 0%, rgba(37,99,235,0.04) 100%)',
+            }}
+        />
+        <Box
+            style={{
+                position: 'absolute',
+                bottom: 40,
+                right: 340,
+                width: 240,
+                height: 240,
+                borderRadius: 120,
+                background: 'rgba(245,158,11,0.07)',
+            }}
+        />
+
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                gap: 10,
+            }}
+        >
+            <Text style={{ fontSize: 21, color: '#64748B', letterSpacing: 6 }}>
+                课 时 02
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 130,
+                    fontFamily: 'Consolas',
+                    fontWeight: 'bold',
+                    color: '#06B6D4',
+                    lineHeight: 1,
+                    letterSpacing: -4,
+                    marginTop: 6,
+                }}
+            >
+                02
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 52,
+                    fontWeight: 'bold',
+                    color: '#0F172A',
+                    lineHeight: 1.25,
+                    marginTop: 10,
+                }}
+            >
+                Fetch 与跨域
+            </Text>
+
+            <Text style={{ fontSize: 25, color: '#64748B', lineHeight: 1.6, marginTop: 12 }}>
+                浏览器原生请求 · Promise 异步 · 跨域从哪来
+            </Text>
+
+            <Box style={{ flexDirection: 'row', gap: 14, marginTop: 34 }}>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>fetch 怎么写</Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>为什么拿到的不是数据</Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>跨域怎么绕</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Slide>
+);

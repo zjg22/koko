@@ -1,0 +1,123 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'absolute',
+                top: -110,
+                right: -70,
+                width: 550,
+                height: 550,
+                borderRadius: 275,
+                background:
+                    'linear-gradient(135deg, rgba(37,99,235,0.11) 0%, rgba(245,158,11,0.05) 100%)',
+            }}
+        />
+        <Box
+            style={{
+                position: 'absolute',
+                bottom: 50,
+                right: 360,
+                width: 230,
+                height: 230,
+                borderRadius: 115,
+                background: 'rgba(6,182,212,0.06)',
+            }}
+        />
+
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                gap: 10,
+            }}
+        >
+            <Text style={{ fontSize: 21, color: '#64748B', letterSpacing: 6 }}>
+                课 时 04
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 130,
+                    fontFamily: 'Consolas',
+                    fontWeight: 'bold',
+                    color: '#2563EB',
+                    lineHeight: 1,
+                    letterSpacing: -4,
+                    marginTop: 6,
+                }}
+            >
+                04
+            </Text>
+
+            <Text
+                style={{
+                    fontSize: 52,
+                    fontWeight: 'bold',
+                    color: '#0F172A',
+                    lineHeight: 1.25,
+                    marginTop: 10,
+                }}
+            >
+                前端联调实战
+            </Text>
+
+            <Text style={{ fontSize: 25, color: '#64748B', lineHeight: 1.6, marginTop: 12 }}>
+                把前面三节课拼起来，跑通一个完整闭环
+            </Text>
+
+            <Box style={{ flexDirection: 'row', gap: 14, marginTop: 34 }}>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>列表渲染</Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>搜索过滤</Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#F1F5F9',
+                        borderRadius: 8,
+                        paddingTop: 11,
+                        paddingBottom: 11,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                    }}
+                >
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>新增提交</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Slide>
+);

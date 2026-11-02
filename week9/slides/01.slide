@@ -1,0 +1,303 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'absolute',
+                top: -160,
+                right: -140,
+                width: 620,
+                height: 620,
+                borderRadius: 310,
+                background:
+                    'linear-gradient(135deg, rgba(37,99,235,0.10) 0%, rgba(6,182,212,0.04) 100%)',
+            }}
+        />
+        <Box
+            style={{
+                position: 'absolute',
+                bottom: -120,
+                left: 420,
+                width: 340,
+                height: 340,
+                borderRadius: 170,
+                background: 'rgba(245,158,11,0.06)',
+            }}
+        />
+
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'row',
+                alignItems: 'center',
+            }}
+        >
+            <Box
+                style={{
+                    width: 620,
+                    flexDirection: 'column',
+                }}
+            >
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                    <Box style={{ width: 56, height: 4, background: '#2563EB' }} />
+                    <Text
+                        style={{
+                            fontSize: 16,
+                            color: '#64748B',
+                            letterSpacing: 5,
+                        }}
+                    >
+                        WEEK 09
+                    </Text>
+                </Box>
+
+                <Text
+                    style={{
+                        fontSize: 58,
+                        fontWeight: 'bold',
+                        color: '#0F172A',
+                        lineHeight: 1.25,
+                        marginTop: 26,
+                    }}
+                >
+                    全栈基础
+                </Text>
+                <Text
+                    style={{
+                        fontSize: 44,
+                        fontWeight: 'bold',
+                        color: '#2563EB',
+                        lineHeight: 1.3,
+                        marginTop: 6,
+                    }}
+                >
+                    前端 与 后端 接口交互
+                </Text>
+
+                <Text
+                    style={{
+                        fontSize: 21,
+                        color: '#64748B',
+                        lineHeight: 1.7,
+                        marginTop: 26,
+                    }}
+                >
+                    HTTP 基础 · Fetch 请求 · 跨域认知
+                    <br />
+                    json-server 模拟后端 · CRUD 雏形
+                </Text>
+
+                <Box
+                    style={{
+                        marginTop: 40,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 12,
+                    }}
+                >
+                    <Box
+                        style={{
+                            background: '#F1F5F9',
+                            borderRadius: 8,
+                            paddingTop: 10,
+                            paddingBottom: 10,
+                            paddingLeft: 18,
+                            paddingRight: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 17, color: '#0F172A', fontWeight: 'bold' }}>
+                            Web前端技术 · 专升本·软件工程
+                        </Text>
+                    </Box>
+                    <Box
+                        style={{
+                            background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+                            borderRadius: 8,
+                            paddingTop: 10,
+                            paddingBottom: 10,
+                            paddingLeft: 18,
+                            paddingRight: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 17, color: '#FFFFFF', fontWeight: 'bold' }}>
+                            4 课时
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    flex: 1,
+                    flexDirection: 'column',
+                    paddingLeft: 40,
+                    gap: 16,
+                }}
+            >
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 14,
+                        background: '#FFFFFF',
+                        borderRadius: 14,
+                        paddingTop: 20,
+                        paddingBottom: 20,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        boxShadow: '0 4px 20px rgba(15,23,42,0.08)',
+                    }}
+                >
+                    <Box
+                        style={{
+                            width: 46,
+                            height: 46,
+                            borderRadius: 10,
+                            background: 'rgba(37,99,235,0.10)',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <FAIcon
+                            name='globe'
+                            style={{ fill: '#2563EB', width: 24, height: 24 }}
+                        />
+                    </Box>
+                    <Box style={{ flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>
+                            前端 · 浏览器
+                        </Text>
+                        <Text style={{ fontSize: 15, color: '#64748B', marginTop: 3 }}>
+                            发请求、拿数据、渲染页面
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 12,
+                        paddingLeft: 20,
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontSize: 15,
+                            fontFamily: 'Consolas',
+                            color: '#2563EB',
+                            fontWeight: 'bold',
+                        }}
+                    >
+                        GET /goods
+                    </Text>
+                    <FAIcon
+                        name='arrow-right'
+                        style={{ fill: '#06B6D4', width: 20, height: 20 }}
+                    />
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 12,
+                        paddingLeft: 20,
+                    }}
+                >
+                    <FAIcon
+                        name='arrow-left'
+                        style={{ fill: '#F59E0B', width: 20, height: 20 }}
+                    />
+                    <Text
+                        style={{
+                            fontSize: 15,
+                            fontFamily: 'Consolas',
+                            color: '#B45309',
+                            fontWeight: 'bold',
+                        }}
+                    >
+                        200 [ {"{"} ... {"}"} ]
+                    </Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 14,
+                        background: '#FFFFFF',
+                        borderRadius: 14,
+                        paddingTop: 20,
+                        paddingBottom: 20,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        boxShadow: '0 4px 20px rgba(15,23,42,0.08)',
+                    }}
+                >
+                    <Box
+                        style={{
+                            width: 46,
+                            height: 46,
+                            borderRadius: 10,
+                            background: 'rgba(6,182,212,0.12)',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <FAIcon
+                            name='database'
+                            style={{ fill: '#0891B2', width: 24, height: 24 }}
+                        />
+                    </Box>
+                    <Box style={{ flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>
+                            后端 · 服务器
+                        </Text>
+                        <Text style={{ fontSize: 15, color: '#64748B', marginTop: 3 }}>
+                            存数据、处理逻辑、返回结果
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        marginTop: 6,
+                        background: '#F1F5F9',
+                        borderRadius: 10,
+                        paddingTop: 14,
+                        paddingBottom: 14,
+                        paddingLeft: 20,
+                        paddingRight: 20,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 12,
+                    }}
+                >
+                    <FAIcon
+                        name='exchange-alt'
+                        style={{ fill: '#2563EB', width: 22, height: 22 }}
+                    />
+                    <Text style={{ fontSize: 17, color: '#0F172A' }}>
+                        接口 = 两边说好的对话方式
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
+    </Slide>
+);

@@ -1,0 +1,196 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>状 态 码</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>06 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    报错误先状态码，别慌
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'column', width: '100%', gap: 16 }}>
+                <Box style={{ flexDirection: 'row', width: '100%', gap: 16 }}>
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 42, fontFamily: 'Consolas', fontWeight: 'bold', color: '#16A34A', lineHeight: 1 }}>200</Text>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0F172A' }}>OK 成功</Text>
+                            <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>拿到数据了</Text>
+                        </Box>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 42, fontFamily: 'Consolas', fontWeight: 'bold', color: '#06B6D4', lineHeight: 1 }}>201</Text>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0F172A' }}>Created 已创建</Text>
+                            <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>新增成功</Text>
+                        </Box>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 42, fontFamily: 'Consolas', fontWeight: 'bold', color: '#F59E0B', lineHeight: 1 }}>400</Text>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0F172A' }}>Bad Request</Text>
+                            <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>参数格式错了</Text>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', width: '100%', gap: 16 }}>
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 42, fontFamily: 'Consolas', fontWeight: 'bold', color: '#F59E0B', lineHeight: 1 }}>404</Text>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0F172A' }}>Not Found</Text>
+                            <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>接口地址写错了</Text>
+                        </Box>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 42, fontFamily: 'Consolas', fontWeight: 'bold', color: '#F59E0B', lineHeight: 1 }}>401</Text>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0F172A' }}>未授权 / 403 禁止</Text>
+                            <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>没登录或没权限</Text>
+                        </Box>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            gap: 18,
+                        }}
+                    >
+                        <Text style={{ fontSize: 42, fontFamily: 'Consolas', fontWeight: 'bold', color: '#EF4444', lineHeight: 1 }}>500</Text>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0F172A' }}>Server Error</Text>
+                            <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>后端代码崩了</Text>
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'linear-gradient(120deg, #2563EB 0%, #06B6D4 100%)',
+                    borderRadius: 14,
+                    paddingTop: 24,
+                    paddingBottom: 24,
+                    paddingLeft: 32,
+                    paddingRight: 32,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 18,
+                }}
+            >
+                <FAIcon name='lightbulb' style={{ fill: '#FFFFFF', width: 28, height: 28 }} />
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>
+                    不用背，记住规律就行：2 开头是成功，4 开头是你写错了，5 开头是后端崩了
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>06 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

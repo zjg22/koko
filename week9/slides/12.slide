@@ -1,0 +1,143 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#06B6D4' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>F E T C H · G E T</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>12 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    第一步：把数据拿回来
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 28 }}>
+                <Box style={{ width: 700, flexDirection: 'column' }}>
+                    <CodeBlock language='javascript' theme='github-light' macHeader={false}>
+                        {`// GET 请求：获取商品列表
+fetch('http://localhost:3000/goods')
+  .then(res => {
+    // res 是响应对象，不是数据本身
+    console.log(res.status)   // 200
+    return res.json()         // 转成 JS 数据
+  })
+  .then(data => {
+    console.log('拿到商品数据：', data)
+  })
+  .catch(err => {
+    console.error('请求失败：', err)
+  })`}
+                    </CodeBlock>
+
+                    <Box style={{ marginTop: 18 }}>
+                        <CodeBlock language='javascript' theme='github-light' macHeader={false}>
+                            {`// 同样的逻辑，async/await 写法更好读
+async function loadGoods() {
+  const res = await fetch('http://localhost:3000/goods')
+  const data = await res.json()
+  console.log(data)
+}`}
+                        </CodeBlock>
+                    </Box>
+                </Box>
+
+                <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                            <FAIcon name='envelope' style={{ fill: '#2563EB', width: 22, height: 22 }} />
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>fetch 拿到的是信封</Text>
+                        </Box>
+                        <Text style={{ fontSize: 16, color: '#64748B', marginTop: 10, lineHeight: 1.7 }}>
+                            里面有状态码、响应头，
+                            但"信纸"要 res.json() 才拆得开。
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: '#F1F5F9',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                            <FAIcon name='plug' style={{ fill: '#06B6D4', width: 22, height: 22 }} />
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>不用装任何东西</Text>
+                        </Box>
+                        <Text style={{ fontSize: 16, color: '#64748B', marginTop: 10, lineHeight: 1.7 }}>
+                            fetch 是浏览器自带的，
+                            打开控制台就能直接用。
+                        </Text>
+                    </Box>
+
+                    <Box
+                        style={{
+                            flex: 1,
+                            background: 'rgba(245,158,11,0.14)',
+                            borderRadius: 12,
+                            paddingTop: 20,
+                            paddingBottom: 20,
+                            paddingLeft: 22,
+                            paddingRight: 22,
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                            <FAIcon name='exclamation-triangle' style={{ fill: '#B45309', width: 22, height: 22 }} />
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0F172A' }}>404/500 不进 catch</Text>
+                        </Box>
+                        <Text style={{ fontSize: 16, color: '#64748B', marginTop: 10, lineHeight: 1.7 }}>
+                            要用 res.ok 判断，
+                            这是 fetch 最反直觉的一点。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

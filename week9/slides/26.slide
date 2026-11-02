@@ -1,0 +1,318 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'absolute',
+                top: -140,
+                right: -100,
+                width: 580,
+                height: 580,
+                borderRadius: 290,
+                background:
+                    'linear-gradient(135deg, rgba(37,99,235,0.10) 0%, rgba(6,182,212,0.04) 100%)',
+            }}
+        />
+        <Box
+            style={{
+                position: 'absolute',
+                bottom: -90,
+                left: -100,
+                width: 360,
+                height: 360,
+                borderRadius: 180,
+                background: 'rgba(245,158,11,0.06)',
+            }}
+        />
+
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                    <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                    <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>
+                        本 周 小 结
+                    </Text>
+                </Box>
+
+                <Text
+                    style={{
+                        fontSize: 34,
+                        fontWeight: 'bold',
+                        color: '#0F172A',
+                        lineHeight: 1.3,
+                        marginTop: 16,
+                    }}
+                >
+                    记住这四句话就够了
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 20 }}>
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontSize: 60,
+                            fontFamily: 'Consolas',
+                            fontWeight: 'bold',
+                            color: '#2563EB',
+                            lineHeight: 1,
+                            letterSpacing: -2,
+                        }}
+                    >
+                        01
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 22,
+                            fontWeight: 'bold',
+                            color: '#0F172A',
+                            marginTop: 14,
+                            lineHeight: 1.4,
+                        }}
+                    >
+                        GET 查，POST 增
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 15,
+                            color: '#64748B',
+                            marginTop: 12,
+                            lineHeight: 1.7,
+                        }}
+                    >
+                        GET 的参数跟在 URL 后面，
+                        POST 的数据放在请求体里。
+                    </Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontSize: 60,
+                            fontFamily: 'Consolas',
+                            fontWeight: 'bold',
+                            color: '#06B6D4',
+                            lineHeight: 1,
+                            letterSpacing: -2,
+                        }}
+                    >
+                        02
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 22,
+                            fontWeight: 'bold',
+                            color: '#0F172A',
+                            marginTop: 14,
+                            lineHeight: 1.4,
+                        }}
+                    >
+                        fetch 拿到的是信封
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 15,
+                            color: '#64748B',
+                            marginTop: 12,
+                            lineHeight: 1.7,
+                        }}
+                    >
+                        要 res.json() 才是数据；
+                        404/500 要 res.ok 判断。
+                    </Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontSize: 60,
+                            fontFamily: 'Consolas',
+                            fontWeight: 'bold',
+                            color: '#F59E0B',
+                            lineHeight: 1,
+                            letterSpacing: -2,
+                        }}
+                    >
+                        03
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 22,
+                            fontWeight: 'bold',
+                            color: '#0F172A',
+                            marginTop: 14,
+                            lineHeight: 1.4,
+                        }}
+                    >
+                        跨域是浏览器拦的
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 15,
+                            color: '#64748B',
+                            marginTop: 12,
+                            lineHeight: 1.7,
+                        }}
+                    >
+                        协议、域名、端口有一个不同就算。
+                        用 Live Server 打开就能绕开。
+                    </Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+                        borderRadius: 14,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'column',
+                        boxShadow: '0 4px 20px rgba(37,99,235,0.20)',
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontSize: 60,
+                            fontFamily: 'Consolas',
+                            fontWeight: 'bold',
+                            color: '#FFFFFF',
+                            lineHeight: 1,
+                            letterSpacing: -2,
+                        }}
+                    >
+                        04
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 22,
+                            fontWeight: 'bold',
+                            color: '#FFFFFF',
+                            marginTop: 14,
+                            lineHeight: 1.4,
+                        }}
+                    >
+                        Mock 不是真后端
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 15,
+                            color: 'rgba(255,255,255,0.92)',
+                            marginTop: 12,
+                            lineHeight: 1.7,
+                        }}
+                    >
+                        json-server 只是练习用的假接口。
+                        真实项目的后端是另一套东西。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'linear-gradient(120deg, #2563EB 0%, #06B6D4 100%)',
+                    borderRadius: 14,
+                    paddingTop: 26,
+                    paddingBottom: 26,
+                    paddingLeft: 34,
+                    paddingRight: 34,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                }}
+            >
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text
+                        style={{
+                            fontSize: 13,
+                            color: 'rgba(255,255,255,0.75)',
+                            letterSpacing: 2,
+                            marginBottom: 8,
+                        }}
+                    >
+                        下周预告
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 26,
+                            fontWeight: 'bold',
+                            color: '#FFFFFF',
+                            lineHeight: 1.4,
+                        }}
+                    >
+                        Trae 平台：这些接口以后有人帮你生成
+                    </Text>
+                </Box>
+                <Box
+                    style={{
+                        width: 54,
+                        height: 54,
+                        borderRadius: 27,
+                        background: 'rgba(255,255,255,0.18)',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <FAIcon
+                        name='arrow-right'
+                        style={{ fill: '#FFFFFF', width: 26, height: 26 }}
+                    />
+                </Box>
+            </Box>
+        </Box>
+    </Slide>
+);

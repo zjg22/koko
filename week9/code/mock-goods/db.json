@@ -1,0 +1,71 @@
+{
+  "goods": [
+    {
+      "id": "1",
+      "title": "无线鼠标",
+      "price": 79,
+      "stock": 100
+    },
+    {
+      "id": "2",
+      "title": "机械键盘",
+      "price": 199,
+      "stock": 56
+    },
+    {
+      "id": "3",
+      "title": "蓝牙耳机",
+      "price": 129,
+      "stock": 88
+    },
+    {
+      "id": "4",
+      "title": "USB-C 扩展坞",
+      "price": 249,
+      "stock": 32
+    },
+    {
+      "id": "5",
+      "title": "27寸 2K 显示器",
+      "price": 1099,
+      "stock": 15
+    },
+    {
+      "id": "6",
+      "title": "笔记本支架",
+      "price": 89,
+      "stock": 120
+    },
+    {
+      "id": "7",
+      "title": "1TB 移动固态硬盘",
+      "price": 459,
+      "stock": 45
+    },
+    {
+      "id": "8",
+      "title": "人体工学椅",
+      "price": 899,
+      "stock": 8
+    },
+    {
+      "id": "9",
+      "title": "降噪头戴耳机",
+      "price": 699,
+      "stock": 23
+    },
+    {
+      "id": "10",
+      "title": "高清网络摄像头",
+      "price": 219,
+      "stock": 67
+    },
+    {
+      "title": "BBA手机",
+      "price": 799,
+      "stock": 100,
+      "id": "5cl7t9iQ6bo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

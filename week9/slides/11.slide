@@ -1,0 +1,196 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#06B6D4' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>异 步</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>11 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    为什么请求之后不能立刻拿到数据
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 26 }}>
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 24,
+                        paddingBottom: 24,
+                        paddingLeft: 24,
+                        paddingRight: 24,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='ban' style={{ fill: '#94A3B8', width: 24, height: 24 }} />
+                        <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#0F172A' }}>同步（不要这样）</Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#64748B', marginTop: 16, lineHeight: 1.8 }}>
+                        排队等。网络请求可能要几百毫秒甚至几秒，
+                        这段时间页面会卡死、白屏、点不动。
+                        <br />
+                        就像在奶茶店柜台前干站着等，
+                        后面所有人都别想点单。
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            alignSelf: 'flex-start',
+                            background: '#FFFFFF',
+                            borderRadius: 6,
+                            paddingTop: 8,
+                            paddingBottom: 8,
+                            paddingLeft: 14,
+                            paddingRight: 14,
+                        }}
+                    >
+                        <Text style={{ fontSize: 14, fontFamily: 'Consolas', color: '#94A3B8' }}>
+                            页面卡住不动
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: 'rgba(6,182,212,0.10)',
+                        borderRadius: 14,
+                        paddingTop: 24,
+                        paddingBottom: 24,
+                        paddingLeft: 24,
+                        paddingRight: 24,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='check-circle' style={{ fill: '#0891B2', width: 24, height: 24 }} />
+                        <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#0F172A' }}>异步（正确做法）</Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#64748B', marginTop: 16, lineHeight: 1.8 }}>
+                        先取号，去旁边坐着，叫号了再来拿。
+                        等待期间页面照常渲染、照常响应点击。
+                        <br />
+                        数据到了之后，再执行"渲染"这个动作。
+                    </Text>
+                    <Box
+                        style={{
+                            marginTop: 'auto',
+                            alignSelf: 'flex-start',
+                            background: '#FFFFFF',
+                            borderRadius: 6,
+                            paddingTop: 8,
+                            paddingBottom: 8,
+                            paddingLeft: 14,
+                            paddingRight: 14,
+                        }}
+                    >
+                        <Text style={{ fontSize: 14, fontFamily: 'Consolas', color: '#0891B2' }}>
+                            页面不卡
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'column', width: '100%', gap: 12 }}>
+                <Box
+                    style={{
+                        background: '#FFFFFF',
+                        borderWidth: 1,
+                        borderColor: '#E2E8F0',
+                        borderRadius: 10,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 16,
+                    }}
+                >
+                    <Box style={{ width: 96 }}>
+                        <Text style={{ fontSize: 16, fontFamily: 'Consolas', color: '#2563EB', fontWeight: 'bold' }}>Promise</Text>
+                    </Box>
+                    <Text style={{ flex: 1, fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>
+                        一个"承诺"，代表未来才会有的结果
+                    </Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#FFFFFF',
+                        borderWidth: 1,
+                        borderColor: '#E2E8F0',
+                        borderRadius: 10,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 16,
+                    }}
+                >
+                    <Box style={{ width: 96 }}>
+                        <Text style={{ fontSize: 16, fontFamily: 'Consolas', color: '#2563EB', fontWeight: 'bold' }}>.then()</Text>
+                    </Box>
+                    <Text style={{ flex: 1, fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>
+                        成功了之后要做什么
+                    </Text>
+                </Box>
+                <Box
+                    style={{
+                        background: '#FFFFFF',
+                        borderWidth: 1,
+                        borderColor: '#E2E8F0',
+                        borderRadius: 10,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 16,
+                    }}
+                >
+                    <Box style={{ width: 96 }}>
+                        <Text style={{ fontSize: 16, fontFamily: 'Consolas', color: '#2563EB', fontWeight: 'bold' }}>.catch()</Text>
+                    </Box>
+                    <Text style={{ flex: 1, fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>
+                        失败了怎么办（网络断了、服务没起）
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

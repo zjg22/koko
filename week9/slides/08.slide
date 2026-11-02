@@ -1,0 +1,132 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>转 换</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>08 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    两个方法，记住方向就行
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 24 }}>
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 24,
+                        paddingRight: 24,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='arrow-right' style={{ fill: '#2563EB', width: 24, height: 24 }} />
+                        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0F172A' }}>
+                            发出去：stringify
+                        </Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#64748B', marginTop: 12, lineHeight: 1.7 }}>
+                        JS 对象 → JSON 字符串
+                    </Text>
+                    <Box style={{ marginTop: 16 }}>
+                        <CodeBlock language='javascript' theme='github-light' macHeader={false}>
+                            {`const obj = { title: '鼠标', price: 79 }
+
+const str = JSON.stringify(obj)
+
+// '{"title":"鼠标","price":79}'
+//  ↑ 这是一串文本，可以发给后端`}
+                        </CodeBlock>
+                    </Box>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: 'rgba(6,182,212,0.08)',
+                        borderRadius: 14,
+                        paddingTop: 26,
+                        paddingBottom: 26,
+                        paddingLeft: 24,
+                        paddingRight: 24,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='arrow-left' style={{ fill: '#0891B2', width: 24, height: 24 }} />
+                        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0F172A' }}>
+                            收回来：parse
+                        </Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#64748B', marginTop: 12, lineHeight: 1.7 }}>
+                            JSON 字符串 → JS 对象
+                    </Text>
+                    <Box style={{ marginTop: 16 }}>
+                        <CodeBlock language='javascript' theme='github-light' macHeader={false}>
+                            {`const str = '{"title":"鼠标","price":79}'
+
+const obj = JSON.parse(str)
+
+// { title: '鼠标', price: 79 }
+//  ↑ 真正的对象，可以点属性了`}
+                        </CodeBlock>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'linear-gradient(120deg, #2563EB 0%, #06B6D4 100%)',
+                    borderRadius: 14,
+                    paddingTop: 22,
+                    paddingBottom: 22,
+                    paddingLeft: 32,
+                    paddingRight: 32,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 18,
+                }}
+            >
+                <FAIcon name='exclamation-circle' style={{ fill: '#FFFFFF', width: 26, height: 26 }} />
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>
+                    网络上跑的永远是"字符串"，不是对象。所以发出去要转，收回来也要转
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>08 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

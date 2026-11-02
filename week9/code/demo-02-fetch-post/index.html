@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>演示2：fetch 发送 POST 请求</title>
+  <style>
+    body { font-family: "Microsoft YaHei", sans-serif; padding: 30px; background: #F8FAFC; color: #0F172A; }
+    h3 { color: #2563EB; }
+    input { padding: 6px 10px; font-size: 14px; margin-right: 8px; }
+    button { padding: 8px 18px; font-size: 15px; cursor: pointer; background: #2563EB; color: #fff; border: none; border-radius: 6px; }
+    table { border-collapse: collapse; width: 700px; margin-top: 16px; background: #fff; }
+    td, th { border: 1px solid #CBD5E1; padding: 6px 12px; text-align: left; }
+    th { background: #F1F5F9; }
+    .tip { color: #64748B; font-size: 14px; margin-top: 10px; }
+    .warn { color: #B45309; font-size: 14px; margin-top: 10px; font-weight: bold; }
+    #msg { font-family: Consolas, monospace; margin-top: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h3>演示2：用 fetch 新增一条商品（POST）</h3>
+
+  <div>
+    <input id="title" placeholder="商品名称">
+    <input id="price" placeholder="价格" style="width:80px">
+    <input id="stock" placeholder="库存" style="width:80px">
+    <button id="addBtn">提交新增</button>
+  </div>
+
+  <div id="msg"></div>
+
+  <table>
+    <thead>
+      <tr><th>id</th><th>商品名</th><th>价格</th><th>库存</th></tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <p class="warn">POST 提交 JSON，两件事不能漏：headers 里的 Content-Type，body 里的 JSON.stringify。</p>
+  <p class="tip">提交成功后打开项目里的 db.json 文件看看，数据是不是真的写进去了。</p>
+
+  <script>
+    const url = 'http://localhost:3000/goods'
+    const tableBody = document.querySelector('#table-body')
+    const msg = document.querySelector('#msg')
+    const titleInp = document.querySelector('#title')
+    const priceInp = document.querySelector('#price')
+    const stockInp = document.querySelector('#stock')
+
+    // 加载列表
+    async function loadGoods() {
+      const res = await fetch(url)
+      const data = await res.json()
+      render(data)
+    }
+
+    function render(list) {
+      tableBody.innerHTML = ''
+      list.forEach(item => {
+        const tr = document.createElement('tr')
+        tr.innerHTML = `
+          <td>${item.id}</td>
+          <td>${item.title}</td>
+          <td>${item.price}</td>
+          <td>${item.stock}</td>
+        `
+        tableBody.appendChild(tr)
+      })
+    }
+
+    // 新增商品
+    async function addGoods() {
+      const newGoods = {
+        title: titleInp.value,
+        price: Number(priceInp.value),
+        stock: Number(stockInp.value)
+      }
+
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },   // ① 告诉后端我发的是 JSON
+        body: JSON.stringify(newGoods)                      // ② 对象转成 JSON 字符串
+      })
+
+      if (res.ok) {
+        const saved = await res.json()
+        console.log('新增成功，后端返回：', saved)
+        msg.textContent = '新增成功！后端给的 id 是 ' + saved.id
+        loadGoods()          // 重新拉一次列表
+        titleInp.value = ''
+        priceInp.value = ''
+        stockInp.value = ''
+      } else {
+        msg.textContent = '提交失败，状态码：' + res.status
+      }
+    }
+
+    document.querySelector('#addBtn').onclick = addGoods
+    loadGoods()
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#F59E0B' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>A I 辅 助</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>19 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    假数据和接口文档，别手写了
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', width: '100%', gap: 24 }}>
+                <Box
+                    style={{
+                        flex: 1,
+                        background: '#F1F5F9',
+                        borderRadius: 14,
+                        paddingTop: 22,
+                        paddingBottom: 22,
+                        paddingLeft: 24,
+                        paddingRight: 24,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='database' style={{ fill: '#2563EB', width: 24, height: 24 }} />
+                        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0F172A' }}>
+                            让 AI 造 Mock 数据
+                        </Text>
+                    </Box>
+                    <Box style={{ marginTop: 14 }}>
+                        <CodeBlock language='text' theme='github-light' macHeader={false}>
+                            {`帮我生成 json-server 用的 db.json，
+资源名称是 goods，字段：
+id(数字自增)、title(商品名称)、
+price(价格)、stock(库存)。
+生成 10 条真实感的数码商品数据，
+输出纯 JSON，不要任何多余文字。`}
+                        </CodeBlock>
+                    </Box>
+                    <Text style={{ fontSize: 15, color: '#B45309', marginTop: 14, lineHeight: 1.6, fontWeight: 'bold' }}>
+                        注意：AI 常带代码块标记，只复制花括号里面的内容
+                    </Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flex: 1,
+                        background: 'rgba(6,182,212,0.08)',
+                        borderRadius: 14,
+                        paddingTop: 22,
+                        paddingBottom: 22,
+                        paddingLeft: 24,
+                        paddingRight: 24,
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                        <FAIcon name='file-alt' style={{ fill: '#0891B2', width: 24, height: 24 }} />
+                        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0F172A' }}>
+                            让 AI 写接口文档
+                        </Text>
+                    </Box>
+                    <Box style={{ marginTop: 14 }}>
+                        <CodeBlock language='text' theme='github-light' macHeader={false}>
+                            {`基于 json-server 的 goods 资源，
+帮我写一份简洁的接口文档，包含：
+请求方式、URL、请求参数、返回示例。
+面向前端开发，能直接照着调，
+不要写后端实现细节。`}
+                        </CodeBlock>
+                    </Box>
+                    <Text style={{ fontSize: 15, color: '#0891B2', marginTop: 14, lineHeight: 1.6, fontWeight: 'bold' }}>
+                        手写 30 分钟 → AI 生成 30 秒 + 人工校对 2 分钟
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'rgba(239,68,68,0.08)',
+                    borderRadius: 12,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    paddingLeft: 28,
+                    paddingRight: 28,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 16,
+                }}
+            >
+                <FAIcon name='exclamation-triangle' style={{ fill: '#EF4444', width: 26, height: 26 }} />
+                <Text style={{ fontSize: 19, color: '#0F172A', lineHeight: 1.6 }}>
+                    红线：AI 生成的代码必须自己读懂，课堂上会随机抽人解释任意一行
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>19 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);

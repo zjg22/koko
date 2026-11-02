@@ -1,0 +1,148 @@
+(
+    <Slide
+        style={{
+            width: 1280,
+            height: 720,
+            background: '#FFFFFF',
+            position: 'relative',
+            paddingTop: 52,
+            paddingBottom: 52,
+            paddingLeft: 72,
+            paddingRight: 72,
+        }}
+    >
+        <Box
+            style={{
+                position: 'relative',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Box style={{ flexDirection: 'column' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+                        <Box style={{ width: 48, height: 4, background: '#2563EB' }} />
+                        <Text style={{ fontSize: 15, color: '#64748B', letterSpacing: 4 }}>接 口 规 范</Text>
+                    </Box>
+                    <Text style={{ fontSize: 13, fontFamily: 'Consolas', color: '#94A3B8' }}>09 / 26</Text>
+                </Box>
+
+                <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0F172A', lineHeight: 1.3, marginTop: 16 }}>
+                    接口地址不是乱起的
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'column', width: '100%', gap: 0 }}>
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        background: '#2563EB',
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10,
+                        paddingTop: 13,
+                        paddingBottom: 13,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                    }}
+                >
+                    <Text style={{ width: 180, fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>要干什么</Text>
+                    <Text style={{ width: 110, fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>方法</Text>
+                    <Text style={{ width: 200, fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>地址</Text>
+                    <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>说明</Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        background: '#F1F5F9',
+                        paddingTop: 14,
+                        paddingBottom: 14,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                    }}
+                >
+                    <Text style={{ width: 180, fontSize: 17, color: '#0F172A' }}>查全部商品</Text>
+                    <Text style={{ width: 110, fontSize: 17, fontFamily: 'Consolas', color: '#2563EB', fontWeight: 'bold' }}>GET</Text>
+                    <Text style={{ width: 200, fontSize: 17, fontFamily: 'Consolas', color: '#0F172A' }}>/goods</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#64748B' }}>返回一个数组</Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        background: '#FFFFFF',
+                        paddingTop: 14,
+                        paddingBottom: 14,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                    }}
+                >
+                    <Text style={{ width: 180, fontSize: 17, color: '#0F172A' }}>查某一条</Text>
+                    <Text style={{ width: 110, fontSize: 17, fontFamily: 'Consolas', color: '#2563EB', fontWeight: 'bold' }}>GET</Text>
+                    <Text style={{ width: 200, fontSize: 17, fontFamily: 'Consolas', color: '#0F172A' }}>/goods/1</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#64748B' }}>返回一个对象</Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        background: '#F1F5F9',
+                        paddingTop: 14,
+                        paddingBottom: 14,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                    }}
+                >
+                    <Text style={{ width: 180, fontSize: 17, color: '#0F172A' }}>新增一条</Text>
+                    <Text style={{ width: 110, fontSize: 17, fontFamily: 'Consolas', color: '#F59E0B', fontWeight: 'bold' }}>POST</Text>
+                    <Text style={{ width: 200, fontSize: 17, fontFamily: 'Consolas', color: '#0F172A' }}>/goods</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#64748B' }}>body 里带数据，id 后端生成</Text>
+                </Box>
+
+                <Box
+                    style={{
+                        flexDirection: 'row',
+                        background: '#FFFFFF',
+                        paddingTop: 14,
+                        paddingBottom: 14,
+                        paddingLeft: 22,
+                        paddingRight: 22,
+                    }}
+                >
+                    <Text style={{ width: 180, fontSize: 17, color: '#0F172A' }}>改 / 删（拓展）</Text>
+                    <Text style={{ width: 110, fontSize: 17, fontFamily: 'Consolas', color: '#06B6D4', fontWeight: 'bold' }}>PUT</Text>
+                    <Text style={{ width: 200, fontSize: 17, fontFamily: 'Consolas', color: '#0F172A' }}>/goods/1</Text>
+                    <Text style={{ flex: 1, fontSize: 17, color: '#64748B' }}>DELETE 同理</Text>
+                </Box>
+            </Box>
+
+            <Box
+                style={{
+                    width: '100%',
+                    background: 'rgba(245,158,11,0.12)',
+                    borderRadius: 12,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    paddingLeft: 28,
+                    paddingRight: 28,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: 16,
+                }}
+            >
+                <FAIcon name='question-circle' style={{ fill: '#B45309', width: 26, height: 26 }} />
+                <Text style={{ fontSize: 19, color: '#0F172A', lineHeight: 1.6 }}>
+                    课堂小思考：① 获取商品列表用 GET 还是 POST？ ② 提交新增商品表单用 GET 还是 POST？
+                </Text>
+            </Box>
+
+            <Box style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>第9周 · 前端 ↔ 后端接口交互</Text>
+                <Text style={{ fontSize: 13, color: '#94A3B8' }}>09 / 26</Text>
+            </Box>
+        </Box>
+    </Slide>
+);
